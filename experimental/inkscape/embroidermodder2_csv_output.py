@@ -165,8 +165,8 @@ class Embroidermodder2_CSV_Output(inkex.Effect):
             for i in range(len(subPath)):
                 s = subPath[i]
                 if not i:
-                    self.csv_append_jump(s[0][0], s[0][1])
-                self.csv_append_stitch(s[0][0], s[0][1])
+                    self.csv_append_jump(s[1][0], -s[1][1])
+                self.csv_append_stitch(s[1][0], -s[1][1])
 
     def effect(self):
         """Method override for inkex.Effect class."""
