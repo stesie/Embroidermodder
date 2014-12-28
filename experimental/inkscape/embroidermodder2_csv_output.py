@@ -42,6 +42,7 @@ _COMMENT_VARIABLES = embroidermodder2_csv_comments.comment_variables
 _COMMENT_THREADS = embroidermodder2_csv_comments.comment_threads
 _COMMENT_STITCHES = embroidermodder2_csv_comments.comment_stitches
 
+pixels_per_millimeter = 90.0 / 25.4
 
 class Embroidermodder2_CSV_Output(inkex.Effect):
     """"""
@@ -93,9 +94,9 @@ class Embroidermodder2_CSV_Output(inkex.Effect):
             "\"*\",\"" +
             "JUMP" +
             "\",\"" +
-            str(x) +
+            str(x / pixels_per_millimeter) +
             "\",\"" +
-            str(y) +
+            str(y / pixels_per_millimeter) +
             "\"\n"
             )
 
@@ -112,9 +113,9 @@ class Embroidermodder2_CSV_Output(inkex.Effect):
             "\"*\",\"" +
             "TRIM" +
             "\",\"" +
-            str(x) +
+            str(x / pixels_per_millimeter) +
             "\",\"" +
-            str(y) +
+            str(y / pixels_per_millimeter) +
             "\"\n"
             )
 
@@ -131,9 +132,9 @@ class Embroidermodder2_CSV_Output(inkex.Effect):
             "\"*\",\"" +
             "STITCH" +
             "\",\"" +
-            str(x) +
+            str(x / pixels_per_millimeter) +
             "\",\"" +
-            str(y) +
+            str(y / pixels_per_millimeter) +
             "\"\n"
             )
 
@@ -150,9 +151,9 @@ class Embroidermodder2_CSV_Output(inkex.Effect):
             "\"*\",\"" +
             "END" +
             "\",\"" +
-            str(x) +
+            str(x / pixels_per_millimeter) +
             "\",\"" +
-            str(y) +
+            str(y / pixels_per_millimeter) +
             "\"\n"
             )
 
